@@ -1,0 +1,13 @@
+.cart-nav {
+  color: rgba(243, 203, 24, 0.836);
+  text-decoration: none;
+  flex-direction: row;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 8px;
+  margin-left: 9rem;
+}
+
+.cart-nav:hover {
+  color: rgb(83, 56, 156);
+}

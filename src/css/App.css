@@ -1,0 +1,10 @@
+.body-container {
+  background-color: #aa9f80;
+  background-image:
+    linear-gradient(rgba(170, 159, 128, 0.3), rgba(170, 159, 128, 0.7)),
+    url("/Biblio.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: center 100%;
+}
