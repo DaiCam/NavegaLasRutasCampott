@@ -7,4 +7,5 @@
   background-repeat: no-repeat;
   min-height: 100vh;
   background-position: center 100%;
+  background-attachment: fixed;
 }

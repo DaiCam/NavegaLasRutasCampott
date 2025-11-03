@@ -40,3 +40,12 @@
 .logo {
   width: 6rem;
 }
+
+.a-nav.active {
+  color: #fff;
+  background-color: rgb(83, 56, 156);
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 1.3rem;
+}
