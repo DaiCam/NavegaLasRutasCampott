@@ -5,19 +5,18 @@ import ItemDetail from "./ItemDetail"
 
 const ItemDetailContainer = () => {
   const [detalle, setDetalle] = useState({})
+  const [loading, setLoading] = useState(false)
   const { id } = useParams()
 
   useEffect(() => {
+    setLoading(true)
     getOneProduct(id)
       .then((res) => setDetalle(res))
       .catch((error) => console.log(error))
+      .finally(() => setLoading(false))
   }, [id])
 
-  return (
-    <div>
-      <ItemDetail detalle={detalle} />
-    </div>
-  )
+  return <>{loading ? <Loader /> : <ItemDetail detalle={detalle} />}</>
 }
 
 export default ItemDetailContainer

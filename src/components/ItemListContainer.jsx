@@ -6,9 +6,11 @@ import { useParams } from "react-router-dom"
 
 const ItemListContainer = (props) => {
   const [data, setData] = useState([])
+  const [loader, setLoader] = useState(false)
   const { type } = useParams()
 
   useEffect(() => {
+    setLoader(true)
     getProductos()
       .then((res) => {
         if (!type) {
@@ -20,26 +22,33 @@ const ItemListContainer = (props) => {
         }
       })
       .catch((error) => console.log(error))
+      .finally(() => setLoader(false))
   }, [type])
 
   return (
-    <div>
-      <div style={{ textAlign: "center" }}>
-        {props.imagen && (
-          <img
-            src={props.imagen}
-            alt="logo"
-            style={{
-              width: "500px",
-              marginTop: "1rem",
-            }}
-          />
-        )}
-      </div>
-      <h1 className="style-h1">{props.mensaje}</h1>
-      {/* <ItemList data={data} /> */}
-      {data.length > 0 && <ItemList data={data} />}
-    </div>
+    <>
+      {loader ? (
+        <Loader />
+      ) : (
+        <div>
+          <div style={{ textAlign: "center" }}>
+            {props.imagen && (
+              <img
+                src={props.imagen}
+                alt="logo"
+                style={{
+                  width: "500px",
+                  marginTop: "1rem",
+                }}
+              />
+            )}
+          </div>
+          <h1 className="style-h1">{props.mensaje}</h1>
+          {/* <ItemList data={data} /> */}
+          {data.length > 0 && <ItemList data={data} />}
+        </div>
+      )}
+    </>
   )
 }
 
