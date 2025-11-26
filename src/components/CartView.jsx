@@ -25,32 +25,25 @@ const CartView = () => {
       >
         Carrito de compras <FaShoppingCart color="black" size={30} />
       </h1>
-      <div style={{ backgroundColor: "red" }} className="cart-items">
+      <div className="cart-items">
         {cart.map((compra) => (
-          <div
-            style={{ backgroundColor: "pink", borderRadius: "6px" }}
-            className="cart-item"
-            key={compra.id}
-          >
+          <div className="cart-item" key={compra.id}>
             {/* <div style={{ backgroundColor: "yellow" }}> */}
             <img
               src={compra.img}
               alt={compra.name}
-              style={{ width: "150px", borderRadius: "6px" }} //para achica la imagen
+              style={{ width: "150px", borderRadius: "6px" }} //para achicar la imagen
             />
             {/* </div> */}
             {/* div para que vaya uno abajo del otro */}
             {/* Me gustaría traerme el ItemCount por si quiero descontar algo o sumar */}
-            <div
-              style={{ backgroundColor: "yellow", padding: "1rem" }}
-              className="cart-info"
-            >
+            <div style={{ padding: "1rem" }} className="cart-info">
               <span>{compra.name}</span>
               <span>${compra.price},00</span>
               <span>cantidad: {compra.quantity}</span>
               <span>precio final: ${compra.quantity * compra.price},00</span>
               <button
-                className="btn btn-danger"
+                className="btn btn-clear"
                 onClick={() => removeItem(compra.id)}
               >
                 X
@@ -61,17 +54,17 @@ const CartView = () => {
       </div>
       {/* crear una funcion que devuelva el total a pagar */}
       <div className="cart-container">
-        <div className="cart-total" style={{ backgroundColor: "green" }}>
+        <div className="cart-total">
           <span>Total a pagar: ${total()},00</span>
         </div>
 
         <div className="cart-buttons">
-          <button className="btn btn-danger" onClick={clear}>
+          <button className="btn btn-clear" onClick={clear}>
             Vaciar carrito
           </button>
 
-          <Link className="btn btn-success" to="/checkout">
-            Terminar compra
+          <Link className="btn btn-finalizar-compra" to="/checkout">
+            Finalizar compra
           </Link>
         </div>
       </div>

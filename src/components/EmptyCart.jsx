@@ -5,7 +5,7 @@ const EmptyCart = () => {
   return (
     <div
       style={{
-        backgroundColor: "red",
+        backgroundColor: "rgb(138, 134, 143, 0.8)",
         display: "flex",
         flexDirection: "column", // para que queden uno abajo del otro
         alignItems: "center", // centra horizontalmente
@@ -14,6 +14,7 @@ const EmptyCart = () => {
         padding: "2rem", // espacio interno
         margin: "0 auto", // centrar horizontal
         borderRadius: "0.5rem",
+        fontFamily: "Dancing Script",
       }}
     >
       {" "}
