@@ -6,27 +6,39 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Error from "./components/Error"
 import ItemDetailContainer from "./components/ItemDetailContainer"
 import { CartProvider } from "./context/CartContext"
-import CartContainer from "./components/Cart"
+import Cart from "./components/Cart"
+import Checkout from "./components/Checkout"
+import Home from "./components/Home"
 
 function App() {
   return (
     <div className="body-container">
       <BrowserRouter>
-        <Navbar />
         <CartProvider>
+          <Navbar />
           <Routes>
-            <Route
+            {/* <Route
               path="/"
               element={
                 <ItemListContainer
-                  mensaje="Haz de la lectura tu momento favorito"
-                  imagen="/logo-02.png"
+                  mensaje="Leer es viajar sin moverse del lugar"
+                  imagen="/el-estante-logo.png"
+                />
+              }
+            /> */}
+            <Route
+              path="/"
+              element={
+                <Home
+                  mensaje="Leer es viajar sin moverse del lugar"
+                  imagen="/el-estante-logo.png"
                 />
               }
             />
             <Route path="/category/:type" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </CartProvider>

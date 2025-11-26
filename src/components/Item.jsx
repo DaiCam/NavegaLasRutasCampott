@@ -7,13 +7,13 @@ const Item = ({ prod }) => {
   return (
     <Card
       style={{
-        width: "14rem",
-        backgroundColor: "rgba(0,0,0,0.8)",
+        width: "13rem",
+        backgroundColor: "rgb(138, 134, 143, 0.8)",
         borderRadius: "12px",
         boxShadow: "0px 2px 10px rgba(0,0,0,0.25)",
-        color: "rgba(243, 203, 24, 0.836)",
-        fontFamily: "Dancing Script",
-        fontSize: "1.3rem",
+        color: "black",
+        fontFamily: '"Dancing", "Monserrat", sans-serif',
+        fontSize: "1rem",
       }}
     >
       <Card.Img variant="top" src={prod.img} />

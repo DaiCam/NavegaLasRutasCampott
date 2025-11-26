@@ -1,15 +1,21 @@
+import { FaShoppingCart } from "react-icons/fa"
+import { Badge } from "react-bootstrap"
 import { useContext } from "react"
-import "../css/CartWidget.css"
 import { CartContext } from "../context/CartContext"
+import { NavLink } from "react-router-dom"
 
 const CartWidget = () => {
-  const { cart } = useContext(CartContext)
-  console.log({ cart })
+  const { cartQuantity, cart } = useContext(CartContext)
+  console.log(cart)
   return (
-    <div className="cart-nav">
-      <span>🛒</span>
-      <span>3</span>
-    </div>
+    <NavLink to="/cart" style={{ cursor: "pointer", textDecoration: "none" }}>
+      <FaShoppingCart fontSize={"1rem"} color="black" />
+      {cart.length > 0 && (
+        <Badge pill bg="danger">
+          {cartQuantity()}
+        </Badge>
+      )}
+    </NavLink>
   )
 }
 

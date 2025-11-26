@@ -13,26 +13,28 @@ const ItemDetail = ({ detalle }) => {
   console.log(cart)
 
   //sigo la activida a raja tabla
-  // const [quantityAdded, setQUantityAdded]= useState(0)
+  const [quantityAdded, setQUantityAdded] = useState(0)
 
-  // const onAdd = (cantidad)=> {
-  //   console.log(`Agregaste ${cantidad} al carrito`)
-  //   setQUantityAdded(cantidad)
-  //   addItem(detalle,cantidad)
-  //   console.log(quantityAdded, 'adentro ')
-  // }
-  // console.log(quantityAdded, 'afuera ')
-
-  //recomendacion mia
-  const [purchase, setPurchase] = useState(false)
-  console.log(cart)
-
-  //recomendacion mia
   const onAdd = (cantidad) => {
     console.log(`Agregaste ${cantidad} al carrito`)
-    setPurchase(true)
+    setQUantityAdded(cantidad)
     addItem(detalle, cantidad)
+    console.log(quantityAdded, "adentro ")
   }
+  console.log(quantityAdded, "afuera ")
+
+  //recomendacion mia
+  // const [purchase, setPurchase] = useState(false)
+  // console.log(cart)
+
+  // //recomendacion mia
+  // const onAdd = (cantidad) => {
+  //   console.log(`Agregaste ${cantidad} al carrito`)
+  //   setPurchase(true)
+  //   console.log("purchase:", purchase)
+
+  //   addItem(detalle, cantidad)
+  // }
 
   return (
     <div
@@ -45,6 +47,7 @@ const ItemDetail = ({ detalle }) => {
         paddingBottom: "2rem",
         maxWidth: "800px",
         margin: "0 auto",
+        fontFamily: '"Monserrat", sans-serif',
       }}
     >
       <div style={{ flex: "0 0 300px" }}>
@@ -64,7 +67,7 @@ const ItemDetail = ({ detalle }) => {
           display: "flex",
           flexDirection: "column",
           gap: "1rem",
-          backgroundColor: "rgba(170, 159, 128, 0.9)",
+          backgroundColor: "rgb(206, 206, 211)",
           padding: "1.5rem",
           borderRadius: "8px",
         }}
@@ -79,14 +82,20 @@ const ItemDetail = ({ detalle }) => {
 
         <p style={{ margin: 0 }}>Stock disponible: {detalle?.stock}</p>
         {/* sigo tal cual la consigna */}
-        {/* {quantityAdded !== 0 ? <button className='btn btn-dark'>Terminar compra</button> : <ItemCount stock={detalle.stock} onAdd={onAdd}/>} */}
-        {purchase ? (
+        {quantityAdded !== 0 ? (
+          <Link className="btn btn-dark" to="/cart">
+            Ir al carrito
+          </Link>
+        ) : (
+          <ItemCount stock={detalle.stock} onAdd={onAdd} />
+        )}
+        {/* {purchase ? (
           <Link className="btn btn-dark" to="/cart">
             Terminar compra
           </Link>
         ) : (
           <ItemCount stock={detalle.stock} onAdd={onAdd} />
-        )}
+        )} */}
 
         {/* <ItemCount stock={detalle?.stock} onAdd={onAdd} /> */}
       </div>
