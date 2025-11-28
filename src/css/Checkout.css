@@ -1,0 +1,19 @@
+.form-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem; /* cambiá el tamaño que quieras */
+  text-align: center; /* centrado */
+  margin-top: 20px;
+}
+
+.form-fondo {
+  background-color: rgba(138, 134, 143, 0.8);
+  width: 600px; /* achicás el ancho */
+  margin: 0 auto; /* centra horizontalmente */
+  padding: 1.5rem; /* opcional: separa el contenido de los bordes */
+  border-radius: 8px; /* opcional */
+}
+
+.form-color {
+  background-color: rgba(154, 151, 158, 0.9); /* color que quieras */
+  border: 1px solid rgb(154, 151, 158) !important;
+}

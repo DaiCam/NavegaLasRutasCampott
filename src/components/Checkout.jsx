@@ -5,6 +5,7 @@ import { doc, updateDoc, increment } from "firebase/firestore"
 import { db } from "../service/firebase"
 import { Link } from "react-router-dom"
 import EmptyCart from "./EmptyCart"
+import "../css/Checkout.css"
 
 const Checkout = () => {
   const [buyer, setBuyer] = useState({})
@@ -71,45 +72,54 @@ const Checkout = () => {
           </Link>
         </div>
       ) : (
-        <div>
-          <h1>Complete con sus datos</h1>
+        <div className="form-fondo">
+          <h1 className="form-title">Complete con sus datos</h1>
           {error && (
-            <span style={{ color: "red", fontWeight: "bold" }}>{error}</span>
+            <span
+              style={{
+                color: "#9c0d14ff", // rosado
+                fontWeight: "bold",
+                fontFamily: "Dancing Script, cursive",
+                fontSize: "1.3rem", // opcional: un poquito más grande
+              }}
+            >
+              {error}
+            </span>
           )}
           <form
-            className="p-4 border rounded shadow-sm bg-light"
+            className="p-4 border rounded shadow-sm form-color"
             onSubmit={finalizarCompra}
           >
             <input
-              className="form-control"
+              className="form-control mb-3"
               name="name"
               type="text"
               placeholder="Ingresa tu nombre"
               onChange={buyerData}
             />
             <input
-              className="form-control"
+              className="form-control mb-3"
               name="lastname"
               type="text"
               placeholder="Ingresa tu apellido"
               onChange={buyerData}
             />
             <input
-              className="form-control"
+              className="form-control mb-3"
               name="address"
               type="text"
               placeholder="Ingresa su direccion"
               onChange={buyerData}
             />
             <input
-              className="form-control"
+              className="form-control mb-3"
               name="mail"
               type="email"
               placeholder="Ingresa tu correo"
               onChange={buyerData}
             />
             <input
-              className="form-control"
+              className="form-control mb-3"
               name="secondmail"
               type="email"
               placeholder="Repetí tu correo"

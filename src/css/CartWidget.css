@@ -1,4 +1,4 @@
-.cart-nav {
+.card-nav {
   color: rgb(206, 206, 211);
   text-decoration: none;
   flex-direction: row;
@@ -8,6 +8,6 @@
   margin-left: 9rem;
 }
 
-.cart-nav:hover {
+.card-nav:hover {
   color: rgb(83, 56, 156);
 }

@@ -1,16 +1,26 @@
-# React + Vite
+# Proyecto coderhouse - React Js 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![imageApp](/public/captura-readme.png)
 
-Currently, two official plugins are available:
+Este proyecto es una aplicación de e-commerce desarrollada en **React** con Js.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La app permite navegar entre categorías, ver cada producto en detalle, sumarlos al carrito y completar la compra mediante un formulario.
+Para manejar los datos se usa Firestore como base de datos: desde ahí se obtienen los productos, se actualiza el stock cuando se realiza una compra y también se guardan todas las órdenes generadas.
 
-## React Compiler
+## Instalación ⚙️
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clonar el repositorio.
+2. Comando cd coder-project para moverse a la carpeta raiz del proyecto.
+3. Instalación de dependencias con el comando npm install.
+4. npm run dev para levantar el proyecto.
 
-## Expanding the ESLint configuration
+## Version Host 💻
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Si desea ver el proyecto online, puede ingredar al siguiente link: CAMBIARRRR
+
+## Librerias utilizadas 📖
+
+Firebase: utilizado como base de datos.
+React Router Dom: utilizada para la navegacion por rutas del proyecto.
+React Bootstrap: utilizada para el styling de la app
+Desarrollado por Daiana Campott

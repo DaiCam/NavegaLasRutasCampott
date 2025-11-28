@@ -1,4 +1,4 @@
-.cart-view {
+.card-view {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,7 @@
   gap: 1rem;
 }
 
-.cart-items {
+.card-items {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,23 +16,30 @@
   justify-content: space-between;
 }
 
-.cart-item {
+.card-item {
+  position: relative;
   display: flex;
   gap: 2rem;
   align-items: center;
   width: 60%;
   padding: 1.5rem;
-  background-color: rgb(206, 206, 211);
+  background-color: rgb(206, 206, 211, 0.8);
   border-radius: 6px;
 }
 
-.cart-info {
+.btn-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.card-info {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.cart-container {
+.card-container {
   width: 80%;
   margin: 2rem auto; /* centra el contenedor */
   display: flex;
@@ -43,13 +50,13 @@
   padding-bottom: "10px";
 }
 
-.cart-total span {
+.card-total span {
   font-size: 1.4rem;
   font-weight: bold;
   color: rgb(26, 25, 25);
 }
 
-.cart-buttons {
+.card-buttons {
   display: flex;
   gap: 1rem;
 }
@@ -57,21 +64,30 @@
 .btn-clear {
   /* margin-left: "4rem";
   margin-right: "4rem"; */
-  background-color: rgb(235, 169, 169);
+  background-color: rgb(245, 70, 70);
   border-radius: 6px;
   border-color: rgb(235, 169, 169);
   /* padding: 5px; */
   color: white;
-}
-
-.btn-finalizar-compra {
-  background-color: rgb(88, 131, 93);
-  border-radius: 6px;
-  border-color: rgb(88, 131, 93);
-  padding: 5px;
+  border-color: rgb(235, 169, 169);
 }
 
 .btn-clear:hover {
   font-weight: bold;
   color: white;
+  background-color: rgb(248, 151, 151);
+}
+
+.btn-finalizar-compra {
+  border-radius: 6px;
+  border-color: rgb(88, 131, 93);
+  padding: 5px;
+  background-color: rgb(88, 131, 93);
+  color: rgb(206, 206, 211);
+  transition: background-color 0.3s ease;
+}
+
+.btn-finalizar-compra:hover {
+  background-color: rgb(70, 115, 80);
+  color: rgb(206, 206, 211);
 }

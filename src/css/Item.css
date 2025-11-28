@@ -1,0 +1,15 @@
+.card-title {
+  font-size: 1.1rem; /* o lo que quieras */
+  font-weight: 200;
+  gap: 0.5rem;
+}
+
+.card-style {
+  width: 10rem;
+  background-color: rgba(206, 206, 211, 0.8);
+  border-radius: 6px;
+  /* box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25); */
+  /* color: black; */
+  font-family: "Dancing", "Monserrat", sans-serif;
+  font-size: 1rem;
+}

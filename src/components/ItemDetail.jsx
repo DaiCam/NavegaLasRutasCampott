@@ -67,7 +67,7 @@ const ItemDetail = ({ detalle }) => {
           display: "flex",
           flexDirection: "column",
           gap: "1rem",
-          backgroundColor: "rgb(206, 206, 211)",
+          backgroundColor: "rgb(206, 206, 211, 0.8)",
           padding: "1.5rem",
           borderRadius: "8px",
         }}

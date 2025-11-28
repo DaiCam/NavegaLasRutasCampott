@@ -25,9 +25,9 @@ const CartView = () => {
       >
         Carrito de compras <FaShoppingCart color="black" size={30} />
       </h1>
-      <div className="cart-items">
+      <div className="card-items">
         {cart.map((compra) => (
-          <div className="cart-item" key={compra.id}>
+          <div className="card-item" key={compra.id}>
             {/* <div style={{ backgroundColor: "yellow" }}> */}
             <img
               src={compra.img}
@@ -37,13 +37,15 @@ const CartView = () => {
             {/* </div> */}
             {/* div para que vaya uno abajo del otro */}
             {/* Me gustaría traerme el ItemCount por si quiero descontar algo o sumar */}
-            <div style={{ padding: "1rem" }} className="cart-info">
+            <div className="card-info">
               <span>{compra.name}</span>
               <span>${compra.price},00</span>
               <span>cantidad: {compra.quantity}</span>
               <span>precio final: ${compra.quantity * compra.price},00</span>
+            </div>
+            <div>
               <button
-                className="btn btn-clear"
+                className="btn btn-clear btn-remove"
                 onClick={() => removeItem(compra.id)}
               >
                 X
@@ -53,12 +55,12 @@ const CartView = () => {
         ))}
       </div>
       {/* crear una funcion que devuelva el total a pagar */}
-      <div className="cart-container">
-        <div className="cart-total">
+      <div className="card-container">
+        <div className="card-total">
           <span>Total a pagar: ${total()},00</span>
         </div>
 
-        <div className="cart-buttons">
+        <div className="card-buttons">
           <button className="btn btn-clear" onClick={clear}>
             Vaciar carrito
           </button>
