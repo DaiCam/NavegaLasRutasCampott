@@ -11,12 +11,9 @@ const ItemDetailContainer = () => {
   const [invalid, setInvalid] = useState(null)
   const { id } = useParams()
 
-  //FIREBASE
   useEffect(() => {
     setLoading(true)
-    //referencia de un documento
     const docRef = doc(db, "productos", id)
-    //traer el documento
     getDoc(docRef)
       .then((res) => {
         if (res.data()) {
@@ -28,14 +25,6 @@ const ItemDetailContainer = () => {
       .catch((error) => console.log(error))
       .finally(() => setLoading(false))
   }, [id])
-
-  // useEffect(() => {
-  //   setLoading(true)
-  //   getOneProduct(id)
-  //     .then((res) => setDetalle(res))
-  //     .catch((error) => console.log(error))
-  //     .finally(() => setLoading(false))
-  // }, [id])
 
   if (invalid) {
     return (

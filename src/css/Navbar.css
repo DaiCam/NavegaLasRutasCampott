@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
 
 .nav-container {
-  /* background-color: rgb(214, 149, 149); */
   background-color: rgb(138, 134, 143);
   display: flex;
   gap: 7rem;

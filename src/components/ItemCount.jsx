@@ -24,7 +24,7 @@ const ItemCount = ({ stock, onAdd }) => {
     <>
       <div>
         <button
-          className="btn btn-count" //"btn btn-danger"
+          className="btn btn-count"
           onClick={restar}
           disabled={count === 0}
         >

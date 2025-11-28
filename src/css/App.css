@@ -1,8 +1,5 @@
 .body-container {
   background-color: black;
-  /* background-image:
-    linear-gradient(rgba(170, 159, 128, 0.3), rgba(170, 159, 128, 0.7)),
-    url("/Biblio.png"); */
   background-image:
     linear-gradient(rgba(170, 159, 128, 0.3), rgba(170, 159, 128, 0.7)),
     url("/Biblio.png");

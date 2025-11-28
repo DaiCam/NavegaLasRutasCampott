@@ -17,15 +17,6 @@ function App() {
         <CartProvider>
           <Navbar />
           <Routes>
-            {/* <Route
-              path="/"
-              element={
-                <ItemListContainer
-                  mensaje="Leer es viajar sin moverse del lugar"
-                  imagen="/el-estante-logo.png"
-                />
-              }
-            /> */}
             <Route
               path="/"
               element={

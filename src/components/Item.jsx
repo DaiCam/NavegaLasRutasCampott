@@ -10,8 +10,6 @@ const Item = ({ prod }) => {
         width: "12rem",
         backgroundColor: "rgb(206, 206, 211, 0.8)",
         borderRadius: "6px",
-        // boxShadow: "0px 2px 10px rgba(0,0,0,0.25)",
-        // color: "black",
         fontFamily: '"Dancing", "Monserrat", sans-serif',
         fontSize: "1rem",
       }}

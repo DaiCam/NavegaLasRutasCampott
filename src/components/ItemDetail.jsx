@@ -5,14 +5,9 @@ import { CartContext } from "../context/CartContext"
 import { Link } from "react-router-dom"
 
 const ItemDetail = ({ detalle }) => {
-  // const contexto = useContext(CartContext)
-  // console.log(contexto)
-
-  //destructury o algo asi
   const { cart, addItem } = useContext(CartContext)
   console.log(cart)
 
-  //sigo la activida a raja tabla
   const [quantityAdded, setQUantityAdded] = useState(0)
 
   const onAdd = (cantidad) => {
@@ -22,19 +17,6 @@ const ItemDetail = ({ detalle }) => {
     console.log(quantityAdded, "adentro ")
   }
   console.log(quantityAdded, "afuera ")
-
-  //recomendacion mia
-  // const [purchase, setPurchase] = useState(false)
-  // console.log(cart)
-
-  // //recomendacion mia
-  // const onAdd = (cantidad) => {
-  //   console.log(`Agregaste ${cantidad} al carrito`)
-  //   setPurchase(true)
-  //   console.log("purchase:", purchase)
-
-  //   addItem(detalle, cantidad)
-  // }
 
   return (
     <div
@@ -81,7 +63,6 @@ const ItemDetail = ({ detalle }) => {
         </p>
 
         <p style={{ margin: 0 }}>Stock disponible: {detalle?.stock}</p>
-        {/* sigo tal cual la consigna */}
         {quantityAdded !== 0 ? (
           <Link className="btn btn-dark" to="/cart">
             Ir al carrito
@@ -89,15 +70,6 @@ const ItemDetail = ({ detalle }) => {
         ) : (
           <ItemCount stock={detalle.stock} onAdd={onAdd} />
         )}
-        {/* {purchase ? (
-          <Link className="btn btn-dark" to="/cart">
-            Terminar compra
-          </Link>
-        ) : (
-          <ItemCount stock={detalle.stock} onAdd={onAdd} />
-        )} */}
-
-        {/* <ItemCount stock={detalle?.stock} onAdd={onAdd} /> */}
       </div>
     </div>
   )

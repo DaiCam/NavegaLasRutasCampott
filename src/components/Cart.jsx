@@ -5,14 +5,7 @@ import CartView from "./CartView"
 
 const CartContainer = () => {
   const { cart } = useContext(CartContext)
-  return (
-    <>
-      {
-        // esto es rendering conditional
-        !cart.length ? <EmptyCart /> : <CartView />
-      }
-    </>
-  )
+  return <>{!cart.length ? <EmptyCart /> : <CartView />}</>
 }
 
 export default CartContainer

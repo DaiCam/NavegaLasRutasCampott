@@ -13,7 +13,6 @@ const Loader = ({ texto }) => {
       }}
     >
       <Spinner animation="grow" variant="dark" />
-      {/* opcional */}
       <span>{texto}</span>
     </div>
   )

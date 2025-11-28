@@ -11,8 +11,8 @@ const CartView = () => {
       style={{
         backgroundColor: "rgb(206, 206, 211, 0.2)",
         paddingBottom: "1rem",
-        width: "60%", // define un ancho
-        margin: "0 auto", // centra horizontalmente
+        width: "60%",
+        margin: "0 auto",
         borderRadius: "6px",
       }}
     >
@@ -28,15 +28,11 @@ const CartView = () => {
       <div className="card-items">
         {cart.map((compra) => (
           <div className="card-item" key={compra.id}>
-            {/* <div style={{ backgroundColor: "yellow" }}> */}
             <img
               src={compra.img}
               alt={compra.name}
-              style={{ width: "150px", borderRadius: "6px" }} //para achicar la imagen
+              style={{ width: "150px", borderRadius: "6px" }}
             />
-            {/* </div> */}
-            {/* div para que vaya uno abajo del otro */}
-            {/* Me gustaría traerme el ItemCount por si quiero descontar algo o sumar */}
             <div className="card-info">
               <span>{compra.name}</span>
               <span>${compra.price},00</span>
@@ -54,7 +50,6 @@ const CartView = () => {
           </div>
         ))}
       </div>
-      {/* crear una funcion que devuelva el total a pagar */}
       <div className="card-container">
         <div className="card-total">
           <span>Total a pagar: ${total()},00</span>

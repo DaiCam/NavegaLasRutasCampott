@@ -1,6 +1,5 @@
 export const productos = [
   {
-    id: "1",
     name: "Cocina con Harry Potter",
     description:
       "El primer libro de cocina de la saga Harry Potter con 150 recetas inspiradas en los platos de la historia, para que magos y muggles puedan recrear comidas deliciosas y mágicas en casa.",

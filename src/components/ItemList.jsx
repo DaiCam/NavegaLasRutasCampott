@@ -6,8 +6,8 @@ import "react-multi-carousel/lib/styles.css"
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3, // cuántas cards se ven en desktop
-    slidesToSlide: 1, // cuántas se mueven al presionar la flecha
+    items: 3,
+    slidesToSlide: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -21,18 +21,6 @@ const responsive = {
   },
 }
 
-// const ItemList = ({ data }) => {
-//   return (
-//     <div
-//       style={{
-//         display: "flex",
-//         justifyContent: "space-around",
-//         alignItems: "center",
-//         flexWrap: "wrap",
-//         paddingTop: "1rem",
-//         paddingBottom: "2rem",
-//       }}
-//     >
 const ItemList = ({ data }) => {
   return (
     <div style={{ padding: "2rem" }}>

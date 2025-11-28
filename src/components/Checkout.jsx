@@ -38,17 +38,15 @@ const Checkout = () => {
       }
 
       const ventas = collection(db, "ventas")
-      //agregar el doc
       addDoc(ventas, order)
         .then((res) => {
           setOrderId(res.id)
           console.log("Guardado en Firebase:", res.id)
 
-          //probando
           cart.forEach(async (prod) => {
             const productRef = doc(db, "productos", prod.id)
             await updateDoc(productRef, {
-              stock: increment(-prod.quantity), // Resta la cantidad comprada
+              stock: increment(-prod.quantity),
             })
           })
           clear()
@@ -64,7 +62,7 @@ const Checkout = () => {
   return (
     <>
       {orderId ? (
-        <div>
+        <div className="form-container">
           <h2>Muchas gracias por su compra</h2>
           <h4>Su orden es: {orderId}</h4>
           <Link className="btn btn-dark" to="/">
@@ -77,10 +75,10 @@ const Checkout = () => {
           {error && (
             <span
               style={{
-                color: "#9c0d14ff", // rosado
+                color: "#9c0d14ff",
                 fontWeight: "bold",
                 fontFamily: "Dancing Script, cursive",
-                fontSize: "1.3rem", // opcional: un poquito más grande
+                fontSize: "1.3rem",
               }}
             >
               {error}

@@ -12,15 +12,11 @@
 .btn-comprar {
   background-color: rgb(88, 131, 93);
   color: rgb(206, 206, 211);
-  transition: background-color 0.3s ease; /* suaviza el cambio de color */
+  transition: background-color 0.3s ease;
 }
 
 .btn-comprar:hover {
-  background-color: rgb(
-    70,
-    115,
-    80
-  ); /* verde ligeramente más oscuro que el base */
+  background-color: rgb(70, 115, 80);
   color: rgb(206, 206, 211);
 }
 
@@ -30,7 +26,7 @@
 }
 
 .btn-count:hover {
-  background-color: rgb(58, 62, 66); /* fondo más claro que el normal */
+  background-color: rgb(58, 62, 66);
   color: rgb(226, 226, 231);
 }
 
